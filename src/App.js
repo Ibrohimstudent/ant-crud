@@ -1,9 +1,12 @@
 import React from 'react';
+import Routing from "./routes";
 
 function App(props) {
+
     return (
         <div>
-            <h1>Hello world</h1>
+            <Routing/>
+
         </div>
     );
 }

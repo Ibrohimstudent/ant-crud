@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css'
-import {BrowserRouter} from "react-router-dom"
-import {ToastContainer,toast} from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import {store} from "./redux/store";
+import {Provider} from "react-redux";
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <App />
-        <ToastContainer/>
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
+
 );
 
 
