@@ -5,12 +5,10 @@ const Layout = lazy(()=>import("../components/layout"))
 const Xodimlar = lazy(()=>import("../pages/xodimlar"))
 const Lavozim = lazy(()=>import("../pages/lavozim"))
 const Daraja = lazy(()=>import("../pages/daraja"))
-const Landing= lazy(()=>import("../pages/landing"))
 function Routing(props) {
     return (
         <Suspense fallback={"Loader"}>
             <Routes>
-                <Route path={"/landing"} element={<Landing/>}/>
                 <Route path={"/"} element={<Layout/>}>
                     <Route path={"/xodimlar"} element={<Xodimlar/>}/>
                     <Route path={"/lavozim"} element={<Lavozim/>}/>
